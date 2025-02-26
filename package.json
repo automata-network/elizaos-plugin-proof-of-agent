@@ -35,11 +35,36 @@
 		"typescript": "5.6.3"
     },
     "scripts": {
-        "build": "tsup --format esm --dts",
-        "dev": "tsup --format esm --dts --watch",
-        "lint": "eslint --fix  --cache ."
+		"build": "tsup --format esm --dts",
+		"dev": "tsup --format esm --dts --watch",
+		"test": "vitest run",
+		"test:watch": "vitest",
+		"lint": "biome check src/",
+		"lint:fix": "biome check --apply src/",
+		"format": "biome format src/",
+		"format:fix": "biome format --write src/"
     },
-    "peerDependencies": {
-        "whatwg-url": "7.1.0"
-    }
+    "agentConfig": {
+		"pluginType": "elizaos:plugin:1.0.0",
+		"pluginParameters": {
+            "TEE_MODE": {
+				"type": "string",
+                "enum": [
+                    "OFF",
+                    "LOCAL",
+                    "DOCKER",
+                    "PRODUCTION"
+                ],
+				"description": "Trusted Execution Environment mode"
+			},
+            "SGX": {
+				"type": "string",
+				"description": "Intel SGX mode"
+			},
+            "PROOF_OF_AGENT_RELAY": {
+				"type": "string",
+				"description": "HTTP Endpoint for proof of agent relay, optional"
+			}
+        }
+	}
 }

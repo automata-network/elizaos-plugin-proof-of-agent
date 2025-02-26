@@ -40,16 +40,8 @@ The `ProofProvider` class handles the attestation and claim submission processes
 
 ## Configuration
 
-Ensure that the TEE mode is enabled in your environment settings. The plugin requires a valid relay URL for communication.
+Ensure that the TEE mode is enabled in your environment settings.
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Contributing
-
-Contributions are welcome! Please see the [CONTRIBUTING.md](CONTRIBUTING.md) file for more information.
-
-## Contact
-
-For questions or support, please contact the development team at support@elizaos.com.
+This project is licensed under the Apache License. See the [LICENSE](LICENSE) file for details.
